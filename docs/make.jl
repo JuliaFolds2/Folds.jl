@@ -8,6 +8,6 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/JuliaFolds/Folds.jl",
+    repo = "github.com/JuliaFolds2/Folds.jl",
     push_preview = true,
 )
