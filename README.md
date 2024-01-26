@@ -44,7 +44,7 @@ Folds.jl interoperates with various packages. For example,
 [StructArrays.jl](https://github.com/JuliaArrays/StructArrays.jl) can be used as
 an input and/or output:
 
-```julia
+```JULIA
 julia> using StructArrays
 
 julia> table = StructVector(
