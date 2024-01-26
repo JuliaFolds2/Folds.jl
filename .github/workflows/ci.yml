@@ -14,7 +14,6 @@ jobs:
         version:
           - '1.6'
           - '1' # automatically expands to the latest stable 1.x release of Julia
-          - 'nightly'
         os:
           - ubuntu-latest
         arch:
@@ -35,7 +34,7 @@ jobs:
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-runtest@v1
         env:
-          JULIA_NUM_THREADS: 2
+          JULIA_NUM_THREADS: 4
   docs:
     name: Documentation
     runs-on: ubuntu-latest
@@ -47,21 +46,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
-
-  # https://github.com/tkf/julia-code-style-suggesters
-  code-style:
-    if: always() && github.event.pull_request
-    runs-on: ubuntu-latest
-    steps:
-      - uses: tkf/julia-code-style-suggesters@v1
-
-  # A job that succeeds if and only if all jobs in `test` succeed.
-  all-success:
-    if: always() && github.event.pull_request
-    needs: [test, vanilla-test, documenter, code-style]
-    runs-on: ubuntu-latest
-    steps:
-      # https://github.com/tkf/merge-conclusions-action
-      - uses: tkf/merge-conclusions-action@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
