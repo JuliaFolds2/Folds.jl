@@ -7,7 +7,7 @@ See _Extended help_ in [`Folds.reduce`](@ref) for more information.
 
 # Examples
 
-```julia
+```JULIA
 julia> using Folds, StructArrays
 
 julia> Folds.copy(StructVector, ((x = x, y = x^2) for x in 1:3))
