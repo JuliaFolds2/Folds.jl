@@ -1,8 +1,8 @@
 # Folds: sequential, threaded, and distributed fold interface for Julia
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliafolds.github.io/Folds.jl/stable)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliafolds.github.io/Folds.jl/dev)
-[![CI](https://github.com/JuliaFolds/Folds.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/JuliaFolds/Folds.jl/actions/workflows/ci.yml)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliafolds2.github.io/Folds.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliafolds2.github.io/Folds.jl/dev)
+[![CI](https://github.com/JuliaFolds/Folds.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/JuliaFolds2/Folds.jl/actions/workflows/ci.yml)
 
 Folds.jl provides a unified interface for sequential, threaded, and
 distributed folds.
@@ -29,7 +29,7 @@ julia> Folds.sum(y for x in 1:10 if isodd(x) for y in 1:x^2)
 4917
 ```
 
-and [Transducers.jl](https://github.com/JuliaFolds/Transducers.jl):
+and [Transducers.jl](https://github.com/JuliaFolds2/Transducers.jl):
 
 ```julia
 julia> using Transducers
@@ -73,6 +73,6 @@ Mean: n=10 | value=5.5
 
 Folds.jl decouples the implementation and the execution mechanism
 ("executor"). Additional executors can be installed from
-[FoldsThreads.jl](https://github.com/JuliaFolds/FoldsThreads.jl),
-[FoldsCUDA.jl](https://github.com/JuliaFolds/FoldsCUDA.jl) (rather WIP), and
-[FoldsDagger.jl](https://github.com/JuliaFolds/FoldsDagger.jl) (very WIP).
+[FoldsThreads.jl](https://github.com/JuliaFolds2/FoldsThreads.jl),
+[FoldsCUDA.jl](https://github.com/JuliaFolds2/FoldsCUDA.jl) (rather WIP), and
+[FoldsDagger.jl](https://github.com/JuliaFolds2/FoldsDagger.jl) (very WIP).

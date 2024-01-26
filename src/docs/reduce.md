@@ -63,7 +63,7 @@ or `Iterators.product`, `Folds.reduce` tries to find an appropriate executor
 using a promotion mechanism.
 
 It is safe for the operator `op` to mutate of the _first_ argument if
-[`Transducers.OnInit`](https://juliafolds.github.io/Transducers.jl/dev/reference/manual/#Transducers.OnInit)
+[`Transducers.OnInit`](https://juliafolds2.github.io/Transducers.jl/dev/reference/manual/#Transducers.OnInit)
 is used for `init`. It can be used to create mutable accumulators (the object
 passed to the first argument to `op`) that can be mutated without a data
 race. Since the second argument to `op` can be originated from `collection`
