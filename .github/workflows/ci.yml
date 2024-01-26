@@ -18,7 +18,6 @@ jobs:
           - ubuntu-latest
         arch:
           - x86
-          - x64
         include:
           - os: ubuntu-latest
             version: 'nightly'
