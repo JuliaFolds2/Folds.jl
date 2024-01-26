@@ -17,7 +17,7 @@ if get(ENV, "CI", "false") == "true"
     LoadAllPackages.loadall()
 end
 @info "Testing with:" nworkers()
-
+@info "Int test" 1 typeof(1) Int
 @testset "$file" for file in sort([
     file for file in readdir(@__DIR__) if match(r"^test_.*\.jl$", file) !== nothing
 ])
