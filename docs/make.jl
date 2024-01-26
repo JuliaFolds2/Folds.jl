@@ -5,6 +5,7 @@ makedocs(
     sitename = "Folds",
     format = Documenter.HTML(),
     modules = [Folds],
+    warnonly = true
 )
 
 deploydocs(
