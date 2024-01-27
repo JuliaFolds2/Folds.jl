@@ -121,5 +121,4 @@ include("testing.jl")
 end
 
 Implementations.@define_docstrings
-
 end
