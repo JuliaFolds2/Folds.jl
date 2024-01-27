@@ -109,8 +109,10 @@ include("collect.jl")
 include("misc.jl")
 
 function __init__()
-    @require OnlineStatsBase="925886fa-5bf2-5e8e-b522-a9147a512338" begin
-        include("interop/onlinestats.jl")
+    @static if !isdefined(Base, :get_extension)
+        @require OnlineStatsBase="925886fa-5bf2-5e8e-b522-a9147a512338" begin
+            include("../ext/FoldsOnlineStatsBaseExt.jl")
+        end
     end
 end
 
